@@ -5,7 +5,7 @@ LABEL name="docker-tuxlervpn-server"
 LABEL version="latest"
 
 # set ENV
-ENV DISPLAY :0
+ENV DISPLAY=:0
 
 # Install wget
 RUN apt-get update
