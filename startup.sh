@@ -2,7 +2,7 @@
 WHITELIST_PORT=31112
 TRANSOCKS_PORT=12345
 INTERFACE=eth0
-
+set DISPLAY=:0
 echo "Creating /etc/transocks.toml"
 echo 'listen = "0.0.0.0:vTRANSOCKS-PORT"
 proxy_url = "vPROXY-URL"
