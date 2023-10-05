@@ -4,14 +4,15 @@ TRANSOCKS_PORT=12345
 INTERFACE=eth0
 export DISPLAY=:0
 echo "Creating /etc/transocks.toml"
-echo 'listen = "0.0.0.0:vTRANSOCKS-PORT"
-proxy_url = "vPROXY-URL"
+echo 'listen = "0.0.0.0:12345"
+proxy_url = "127.0.0.1:40000"
 [log]
 level = "info"' >/etc/transocks.toml
 
 echo "Setting config variables"
-sed -i "s|vPROXY-URL|$PROXY_URL|g" /etc/transocks.toml
-sed -i "s/vTRANSOCKS-PORT/$TRANSOCKS_PORT/g" /etc/transocks.toml
+echo "bypassing"
+#sed -i "s|vPROXY-URL|$PROXY_URL|g" /etc/transocks.toml
+#sed -i "s/vTRANSOCKS-PORT/$TRANSOCKS_PORT/g" /etc/transocks.toml
 
 echo "Restarting transocks and redirecting traffic via iptables"
 transocks &
