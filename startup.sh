@@ -40,7 +40,7 @@ iptables -v -t nat -I PREROUTING -p tcp --match multiport --dports 1701,10702,19
 iptables -v -t nat -I PREROUTING -p tcp --match multiport --dports 23321,23322,23323,23324,23325,23326,23327,23328 -j DNAT --to-destination 127.0.0.1
 
 sleep 1s
-
+Xvfb $DISPLAY -screen 0 1024x768x16 
 wineboot -u ExtensionHelperAppManager.exe
 wineboot -u ExtensionHelperApp.exe
 
