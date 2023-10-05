@@ -5,9 +5,9 @@ INTERFACE=eth0
 export DISPLAY=:0
 echo "Creating /etc/transocks.toml"
 echo 'listen = "0.0.0.0:12345"
-proxy_url = "127.0.0.1:40000"
+proxy_url = "socks5://127.0.0.1:40000"
 [log]
-level = "info"' >/etc/transocks.toml
+level = "info"' > /etc/transocks.toml
 
 echo "Setting config variables"
 echo "bypassing"
